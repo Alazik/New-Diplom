@@ -1,0 +1,27 @@
+.paginator {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-left: 0px;
+}
+
+.buttons {
+    margin-top: 30px;
+    width: 100px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #01407F;
+    cursor: pointer;
+    outline: none;
+}
+
+.pageNumber {
+    cursor: pointer;
+    text-align: center;
+}
+
+.pageNumber:first-child {
+    margin-left: 10px;
+}

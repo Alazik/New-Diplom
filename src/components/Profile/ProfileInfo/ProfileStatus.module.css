@@ -1,0 +1,10 @@
+.inputStatus {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.status {
+    position: relative;
+    top: 120px;
+}

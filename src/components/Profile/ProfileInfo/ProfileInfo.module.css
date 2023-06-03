@@ -1,0 +1,145 @@
+.profileInfo{
+    position: relative;
+    z-index: 100;
+}
+
+.descriptionBlock {
+    padding: 15px;
+}
+
+.mainPhoto {
+    max-width: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 41.6%;
+    top: 90px;
+    box-shadow: 0px 0px 30px 5px black;
+    border: 3px solid white
+}
+
+.contact {
+    padding-left: 10px;
+}
+
+.img {
+    background: #000;
+}
+
+.wallpaper {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    z-index: -1;
+    filter: brightness(90%)
+}
+
+.profileData {
+    margin-top: 85px;
+    text-align: left;
+}
+
+.name {
+    display: block;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.spanInfo{
+    font-size: 30px;
+    font-weight: 100;
+    display: inline-block;
+    border-bottom: 1px solid #01407F;
+    margin-bottom: 10px;
+}
+
+/* .changePhoto {
+    position: relative;
+    top: 320px;
+    left: 770px;
+    z-index: 99;
+} */
+
+.changePhoto {
+    color: transparent;
+    position: relative;
+    top: 320px;
+    left: 900px;
+    z-index: 99;
+  }
+  .changePhoto::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .changePhoto::before {
+    background-image: url(https://e7.pngegg.com/pngimages/564/571/png-clipart-computer-icons-graphy-deliver-to-home-miscellaneous-angle.png);
+    content: '📷';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #fff, #fff);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    width: 50px;
+    text-align: center;
+  }
+  .changePhoto:hover::before {
+    border-color: black;
+  }
+  .changePhoto:active {
+    outline: 0;
+  }
+  .changePhoto:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+
+.Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 127px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: #01407F;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #010F20;
+    transition-duration: .3s;
+  }
+  
+  .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    color: transparent;
+  }
+  
+  .Btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+  }
+  
+  .Btn:active {
+    transform: translate(3px , 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px #010F20;
+  }

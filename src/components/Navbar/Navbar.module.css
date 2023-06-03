@@ -1,0 +1,72 @@
+.nav {
+    grid-area: n;
+    background-color: #ECF5FC;
+    /* background: linear-gradient(26.57deg, #F6E500 16.67%, #00AEC7 100%); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    min-height: 700px;
+    max-height: 700px;
+  }
+
+  .item {
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  .item:first-child {
+    margin-top: 20px;
+  }
+
+  .item:nth-child(4) {
+    margin-top: 40px;
+  }
+
+  .item > a {
+    font-family: 'kelson', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 33px;
+    position: relative;
+  }
+
+  .item > a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: #000; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+  }
+
+  .item > a:hover::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: #000; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+  }
+
+  .item > a.activeLink {
+    font-family: 'kelson', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    position: relative;
+    color: #000;
+  }
+
+  .logo {
+    width: 500px;
+  }

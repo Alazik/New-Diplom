@@ -1,0 +1,14 @@
+.message {
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.messageOfUser {
+    display: inline-block;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #01407F;
+    color: white;
+    margin-top: 3px;
+}

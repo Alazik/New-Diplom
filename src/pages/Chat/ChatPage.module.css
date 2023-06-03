@@ -1,0 +1,47 @@
+.message {
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.messageOfUser {
+    display: inline-block;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #3a3a3a;
+    color: white;
+    margin-top: 3px;
+}
+
+.sendDiv {
+    display: flex;
+    padding-bottom: 10px;
+    border-top: 2px solid #3a3a3a;
+}
+
+.sendButton {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #3a3a3a;
+    cursor: pointer;
+    outline: none;
+}
+
+.messageText {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #3a3a3a;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    width: 90%;
+    resize: none;
+}

@@ -1,0 +1,73 @@
+.container {
+    display: grid;
+    grid-template-columns: 270px 270px 270px;
+    grid-gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user {
+    /* margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    background-color: #010F20;
+    border-radius: 70px;
+    color: white;
+    height: 25rem;                                                                                                                   
+}
+
+.photo{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid #272133;
+    margin-top: 20px;
+    margin-left: 43px;
+    box-shadow: 0 10px 50px rgba(0,174,199, 1);
+}
+
+.aboutUser {
+    text-align: center;
+}
+
+.userName {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.flexButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unfollow {
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    padding: 18px 25px 18px 25px;
+    margin-top: 20px;
+}
+
+.follow {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 18px 25px 18px 25px;
+    margin-top: 20px;
+}
+
+.getUsersClass {
+    display: block;
+}
+
+.selectedPage {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagintaor {
+    max-width: 1250px;
+}

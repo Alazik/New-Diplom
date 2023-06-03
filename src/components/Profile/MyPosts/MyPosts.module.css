@@ -1,0 +1,145 @@
+.postBlock {
+    padding: 15px;
+    margin-left: 260px;
+}
+
+.posts {
+    margin-top: 30px;
+}
+
+.textArea {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.textPost {
+    display: block;
+    border-bottom: 2px solid #01407F;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 5px;
+    width: 700px;
+}
+
+.postForm{
+    display: flex;
+    margin-top: 10px;
+}
+
+.textareaPost {
+    border: 2px solid #d9d9d9;
+    margin-right: 20px;
+    border-radius: 14px;
+    resize: none;
+    width: 555px;
+    height: 58px;
+}
+
+.textareaPost:hover {
+    border: 2px solid #01407F;
+    border-radius: 14px;
+    margin-right: 20px;
+    resize: none;
+}
+
+.buttonPost,
+.buttonPost::after {
+ padding: 10px 14px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #01407F 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00e6f6;
+ outline: transparent;
+ position: relative;
+ border-radius: 7px;
+ position: relative;
+ left: 560px;
+ bottom: 40px;
+}
+
+.buttonPost::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "Отправить";
+ text-align: center;
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #01407F 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+.buttonPost:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}

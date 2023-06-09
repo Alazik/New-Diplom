@@ -49,7 +49,7 @@ export const AppProvider = ({ children }) => {
         })
         localStorage.setItem('id', uid)
         } else{
-          let q = query(collection(database, 'posts'), where('userId', '==', uuid))
+          let q = query(collection(database, 'posts'), where('userId', '==', uuid), orderBy('createdAt'))
         onSnapshot(q, (snapshot) => {
           setPosts(
             snapshot.docs.reverse().map((doc) => ({

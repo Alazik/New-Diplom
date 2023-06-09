@@ -24,5 +24,5 @@ if (firebase.getApps.length === 0) {
 }
 
 const database = getFirestore()
-
-export {database}
+const storage = getStorage()
+export {database, storage}

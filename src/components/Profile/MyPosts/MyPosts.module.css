@@ -143,3 +143,49 @@
   transform: translate(0);
  }
 }
+
+.changePhoto {
+    color: transparent;
+    position: relative;
+    bottom: 40px;
+    left: 570px;
+    z-index: 99;
+  }
+  .changePhoto::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .changePhoto::before {
+    background-image: url(https://e7.pngegg.com/pngimages/564/571/png-clipart-computer-icons-graphy-deliver-to-home-miscellaneous-angle.png);
+    content: '📷';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #01407F, #01407F);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #01407F;
+    font-weight: 700;
+    font-size: 10pt;
+    width: 50px;
+    text-align: center;
+  }
+  .changePhoto:hover::before {
+    border-color: black;
+  }
+  .changePhoto:active {
+    outline: 0;
+  }
+  .changePhoto:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+
+  .postimg{
+    width: 400px;
+    height: 300px;
+    margin-left: 150px;
+    margin-bottom: 10px;
+  }

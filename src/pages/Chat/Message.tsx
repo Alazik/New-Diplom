@@ -11,7 +11,7 @@ export const Message: React.FC<{ message: ChatMessageAPIType }> = React.memo(
           style={{ width: "30px", borderRadius: "50%" }}
           alt=""
         />{" "}
-        <b>{message.userName}</b>
+        <b className={s.username}>{message.userName}</b>
         <br />
         <div className={s.messageOfUser}>{message.message}</div>
       </div>

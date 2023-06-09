@@ -75,7 +75,7 @@
     content: '📷';
     color: black;
     display: inline-block;
-    background: -webkit-linear-gradient(top, #fff, #fff);
+    background: -webkit-linear-gradient(top, #01407F, #01407F);
     border: 1px solid #999;
     border-radius: 3px;
     padding: 5px 8px;
@@ -83,7 +83,7 @@
     white-space: nowrap;
     -webkit-user-select: none;
     cursor: pointer;
-    text-shadow: 1px 1px #fff;
+    text-shadow: 1px 1px #01407F;
     font-weight: 700;
     font-size: 10pt;
     width: 50px;

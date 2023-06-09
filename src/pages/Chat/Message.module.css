@@ -12,3 +12,8 @@
     color: white;
     margin-top: 3px;
 }
+
+.username{
+    position: relative;
+    top: 5px;
+}

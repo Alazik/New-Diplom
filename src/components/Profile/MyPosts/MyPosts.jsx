@@ -9,13 +9,11 @@ import {
 } from "../../../utils/validators/validators";
 import { Textarea } from "../../common/FormsControls/FormsControls";
 import { useTranslation } from "react-i18next";
-import {
-  collection,
-  addDoc
-} from "firebase/firestore";
-import { database } from "../../../firebase";
-import { AuthAPI } from "../../../api/api";
+import { collection, addDoc } from "firebase/firestore";
+import { database, storage } from "../../../firebase";
+import { AuthAPI, profileAPI } from "../../../api/api";
 import { AppContext } from "../../context/context";
+import { ref, uploadBytes } from "firebase/storage";
 
 let maxLength10 = maxLengthCreator(50);
 
@@ -39,6 +37,9 @@ const MyPosts = React.memo((props) => {
   useEffect(() => {
     const lng = localStorage.getItem("lg");
     i18n.changeLanguage(lng);
+    posts.filter((p) => {
+      console.log(p?.image)
+    })
   }, [posts]);
 
   const lng = navigator.language;
@@ -51,7 +52,7 @@ const MyPosts = React.memo((props) => {
       {posts ? (
         <div className={s.posts}>
           {posts.map((p) => (
-            <Post key={p.userId} message={p.message} likesCount={"100"} />
+            <Post key={p.userId} message={p.message} createdAt={p?.createdAt} nick={p?.nick} avatar={p?.avatar} image={p?.image} likesCount={"100"} />
           ))}
         </div>
       ) : (
@@ -61,13 +62,15 @@ const MyPosts = React.memo((props) => {
   );
 });
 
-const AddNewPostForm = (props) => {
+const AddNewPostForm = ({ props }) => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const lng = navigator.language;
     i18n.changeLanguage(lng);
+    
   }, []);
+
 
   return (
     <form className={s.postForm} onSubmit={props.handleSubmit}>
@@ -89,6 +92,8 @@ const AddNewPostForm = (props) => {
 const AddNewPostFormSultan = ({ id, value, setValue }) => {
   // const[post, setPost] = useState('')
   const { t, i18n } = useTranslation();
+  const [photo1, setPhoto] = useState(null)
+  const {photo, nick} = useContext(AppContext)
 
   useEffect(() => {
     const lng = navigator.language;
@@ -96,22 +101,66 @@ const AddNewPostFormSultan = ({ id, value, setValue }) => {
   }, []);
 
   const lng = navigator.language;
-  const sendPost = () => {
+  const sendPost = async() => {
     try {
-      addDoc(collection(database, "posts"), {
-        userId: id,
-        message: value,
-        createdAt: new Date(),
-      });
+      const name = new Date().toString() + "post"
+      
+      const response = await fetch(photo1)
+      const blob = await response.blob()
+
+      let storageRef = ref(storage, "posts/" + name)
+
+      uploadBytes(storageRef, blob).then(() => {
+        addDoc(collection(database, "posts"), {
+          nick: nick,
+          avatar: photo,
+          userId: id,
+          message: value,
+          createdAt: new Date().toLocaleString(),
+          image: name
+        });
+      })
+      setValue('')
+      setPhoto(null)
     } catch (error) {
       console.log(error);
     }
   };
 
+  const onMainPhotoSelected = (e) => {
+    if (e.target.files[0]) {
+      setPhoto(e.target.files[0].file)
+      console.log(e.target.files[0].file)
+    }
+  };
+
+  const showFile = async (e) => { 
+
+    e.preventDefault() 
+
+    const reader = new FileReader() 
+
+    reader.onload = async (e) => { 
+
+      const text = (e.target.result) 
+
+       console.log(text) 
+       setPhoto(text)
+
+
+    }; 
+
+    
+    reader.readAsDataURL(e.target.files[0])
+
+ }
+
   return (
     <div>
       <form className={s.postForm}>
         <div>
+          {photo1 ? <img className={s.postimg} src={photo1} alt=""/> : false}
+          
           <input
             className={s.textareaPost}
             placeholder={t("myPosts.createPost")}
@@ -123,6 +172,11 @@ const AddNewPostFormSultan = ({ id, value, setValue }) => {
       <button onClick={sendPost} className={s.buttonPost}>
         {t("myPosts.send")}
       </button>
+      <input
+        className={s.changePhoto}
+        type={"file"}
+        onChange={showFile}
+      ></input>
     </div>
   );
 };

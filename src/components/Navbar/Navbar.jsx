@@ -48,7 +48,8 @@ const Navbar = () => {
     <nav className={s.nav}>
       <div className={s.item}>
         <NavLink
-        onClick={() => loginPostData(123, true)}
+        // onClick={() => loginPostData(123, true)}
+        onClick={refresh}
           to="/profile"
           className={(navData) => (navData.isActive ? s.activeLink : s.item)}
         >

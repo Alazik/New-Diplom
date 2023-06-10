@@ -20,7 +20,7 @@ const Post = (props) => {
   }, [])
   
   return (
-    <div>
+    <div className={s.post}>
       <div className={s.nick}>{props.nick ? props.nick: false}</div>
       <div>{props.createdAt}</div>
       <div className={s.item}>
@@ -38,9 +38,7 @@ const Post = (props) => {
         alt=""
         src={url}
       />
-      
     </div>
-    
   );
 };
 

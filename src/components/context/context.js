@@ -68,7 +68,8 @@ export const AppProvider = ({ children }) => {
       } catch (error) {
 
       }
-    })()
+    }
+    )()
   }
   return (
     <AppContext.Provider value={{ posts, setPosts, myId, setMyId, getAuthUserData, loginPostData, photo, nick }}>

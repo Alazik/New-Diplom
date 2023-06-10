@@ -156,7 +156,7 @@
   }
   .changePhoto::before {
     background-image: url(https://e7.pngegg.com/pngimages/564/571/png-clipart-computer-icons-graphy-deliver-to-home-miscellaneous-angle.png);
-    content: '📷';
+    content: '📸';
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #01407F, #01407F);

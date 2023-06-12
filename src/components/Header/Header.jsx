@@ -26,7 +26,7 @@ const Header = ({isAuth, login, logout, props}) => {
             <div className={s.loginBlock}>
                 {isAuth 
                 ? <div>{login} <button onClick={logout} className={s.exit}>{t('header.logout')}</button></div> 
-                : <div><NavLink className={s.login} to={'/login'}>{t('header.login')} | </NavLink> <a href="https://social-network.samuraijs.com/signUp" target="_blank">{t('header.registration')}</a></div>}
+                : <div><NavLink className={s.login} to={'/login'}>{t('header.login')} | </NavLink> <a className={s.reg} href="https://social-network.samuraijs.com/signUp" target="_blank">{t('header.registration')}</a></div>}
             </div>
         </header>
     );

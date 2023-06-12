@@ -51,7 +51,8 @@ i18n
           },
           header: {
             logout: "Log out",
-            login: "Log in"
+            login: "Log in",
+            registration: "Registration"
           },
           users: {
             prev: "Prev",
@@ -105,7 +106,8 @@ i18n
           },
           header: {
             logout: "Выйти",
-            login: "Войти"
+            login: "Войти",
+            registration: "Регистрация"
           },
           users: {
             prev: "Пред.",
@@ -159,7 +161,8 @@ i18n
           },
           header: {
             logout: "Шығу",
-            login: "Кіру"
+            login: "Кіру",
+            registration: "Тіркеу"
           },
           users: {
             prev: "Aлдыңғы",
